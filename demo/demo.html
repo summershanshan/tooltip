@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:100px;padding:200px;position:relative">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip demo</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tooltip.css">
+    <style>
+        .btn{
+            width: 150px;
+            height: 40px;
+            line-height:40px;
+            text-align:center;
+            background-color:#e5642b;
+            color:#fff;
+            /*margin-left:50px;*/
+        }
+        .pt-btn{
+            /*margin-top:100px;*/
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border:1px solid #000;
+            margin:100px auto;
+        }
+        .pt-box{
+            width: 200px;
+            height: 200px;
+            border:1px solid red;
+            margin-left:230px;
+        }
+        .box3{
+            position: absolute;
+            left:500px;
+            top:10px;
+            width: 100px;
+            height: 50px;
+            border:1px solid green;
+            margin-top:100px;
+        }
+        .box3 .box4{
+            float:left;
+        }
+        .box4>p>a{
+            margin-left:20px;
+        }
+        .box5{
+            position: absolute;
+            left:300px;
+            bottom:20px;
+            width: 800px;
+        }
+        .box5 .box6{
+            position: absolute;
+            left:0;
+            top:20px;
+            margin-top:20px;
+        }
+        .box5 .box7{
+            position: absolute;
+            right:0;
+            top:30px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+<body style="padding:130px">
+<button class="btn pt-btn" data-tooltip data-tit="click is here! what are you doing now">Hover Me!</button>
+<div class="box3">
+    <div class="box4">
+        <p>
+            <a href="javascript:;" class="pt-btn" data-tooltip data-tit="这是内容">按钮1</a>
+        </p>
+    </div>
+</div>
+<div class="box5">
+    <div class="box6">
+            <h1 data-tooltip data-tit="日本线上" data-placement="right">日本线上</h1>
+    </div>
+    <div class="box7">
+       <div class="box8">
+           <a href="javascript:;">
+               <span data-tooltip data-tit="box.offsetTop + box.offsetParent.offsetTop;//只有两层的情况下">中国线上</span>
+           </a>
+       </div>
+    </div>
+</div>
+<div class="box" data-tooltip data-tit="my name is summer!" data-placement="right">
+    hello world!
+</div>
+<div class="pt-box" data-tooltip data-placement="left" data-width="100" data-tit="tooltips hover event"></div>
+<script src="../js/tooltip.js"></script>
+<script>
+     toolTip();
+</script>
+</body>
+</html>
